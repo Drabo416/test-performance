@@ -1,0 +1,15 @@
+config:
+  target: "https://geteway.iccdiscipolat.com/"
+  phases:
+    - duration: 60
+      arrivalRate: 6000
+  defaults:
+    headers:
+      Content-Type: "application/json"
+scenarios:
+  - flow:
+      - post:
+          url: "https://geteway.iccdiscipolat.com/api/en/v1/auth/login"
+          json:
+            email: "user01@user.com"
+            password: "123456789"
